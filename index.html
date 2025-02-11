@@ -4,12 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Clinica GVidas</title>
-   
+    <title>Clínica GVidas</title>
 </head>
 <body>
-    <div>
-        <img class ="Logo"src="assets/images/GvidasLogo.png">
+
+<header>
+    <img src="/assets/images/GvidasLogo.png" alt="Logo da Gvidas" class="Logo">
+    <h1 class="titulo">Bem-vindo à Clínica Gvidas</h1>
+    
+    <!-- Corrigido: Agrupei o checkbox e o menu dentro do mesmo container -->
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+
+<div class="container">
+    <h2>Agendamento de Consultas e Exames</h2>
+    <form id="agendamento-form">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="data_nascimento">Data de Nascimento:</label>
+      <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+      <label for="especialidade">Especialidade Médica:</label>
+      <select id="especialidade" name="especialidade" required>
+        <option value="Cardiologista">Cardiologista</option>
+        <option value="Oftalmologista">Oftalmologista</option>
+        <option value="Endocrinologista">Endocrinologista</option>
+        <option value="Pediatra">Pediatra</option>
+        <option value="Clínico Geral">Clínico Geral</option>
+        <option value="Ortopedista">Ortopedista</option>
+        <option value="Psiquiatra">Psiquiatra</option>
+      </select>
+
+      <label for="exame">Exame:</label>
+      <select id="exame" name="exame">
+        <option value="">Nenhum</option>
+        <option value="Ecocardiograma">Ecocardiograma</option>
+        <option value="Eletrocardiograma">Eletrocardiograma</option>
+        <option value="Tomografia">Tomografia</option>
+        <option value="Ultrassom">Ultrassom</option>
+        <option value="Raio-X">Raio-X</option>
+      </select>
+
+      <label for="horario">Horário:</label>
+      <select id="horario" name="horario" required>
+        <option value="08:00">08:00</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+      </select>
+
+      <label for="pagamento">Forma de Pagamento:</label>
+      <select id="pagamento" name="pagamento" required>
+        <option value="Dinheiro">Dinheiro Espécie</option>
+        <option value="Pix">Pix</option>
+        <option value="Cartão Crédito">Cartão de Crédito</option>
+        <option value="Cartão Débito">Cartão de Débito</option>
+        <option value="Plano Saúde">Plano de Saúde</option>
+      </select>
+
+      <label for="plano_saude">Tipo de Plano de Saúde:</label>
+      <input type="text" id="plano_saude" name="plano_saude">
+
+      <button type="submit">Agendar</button>
+    </form>
+    <div id="agendamentos">
+      <h3>Consultas Agendadas</h3>
+      <ul id="lista-agendamentos"></ul>
+    </div>
+</div>
+
+<script src="/assets/js/script.js"></script>
 </body>
 </html>
