@@ -16,7 +16,7 @@ Este projeto tem como objetivo facilitar o agendamento de consultas e exames mé
 ✔️ **Forma de pagamento**  
 ✔️ **Confirmação de agendamento**
 
-## 🚀 **Funcionalidades**t
+## 🚀 **Funcionalidades**
 - 📅 **Escolha de especialidade médica**: Apenas médicos da especialidade selecionada são exibidos.
 - ⏰ **Seleção de horários disponíveis**.
 - 🏥 **Opção de exames complementares**.
