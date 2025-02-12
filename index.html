@@ -7,31 +7,29 @@
     <title>Clínica GVidas</title>
 </head>
 <body>
-
 <header>
     <img src="/assets/images/GvidasLogo.png" alt="Logo da Gvidas" class="Logo">
-    <h1 class="titulo">Bem-vindo à Clínica Gvidas</h1>
-    
-    <!-- Corrigido: Agrupei o checkbox e o menu dentro do mesmo container -->
-    <div class="hamburger-menu">
+    <h1 class="titulo">Bem-vindo à Clínica Gvidas</h1>      
+    <!-- Container para o menu hamburguer -->
+     <div class="hamburger-menu">
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger-icon">
             <span></span>
             <span></span>
             <span></span>
         </label>
-        <nav class="menu">
+        <nav class="menu_hamburger">
             <ul>
-                <li><a href="#">Página Inicial</a></li>
+                <li><a href="https://web.whatsapp.com/">Página Inicial</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-    </div>
+    </div> 
 </header>
-
 <div class="container">
+
     <h2>Agendamento de Consultas e Exames</h2>
     <form id="agendamento-form">
       <label for="nome">Nome Completo:</label>
@@ -63,13 +61,13 @@
 
       <label for="horario">Horário:</label>
       <select id="horario" name="horario" required>
-        <option value="08:00">08:00</option>
-        <option value="09:00">09:00</option>
-        <option value="10:00">10:00</option>
-        <option value="11:00">11:00</option>
-        <option value="14:00">14:00</option>
-        <option value="15:00">15:00</option>
-        <option value="16:00">16:00</option>
+        <option value="08:00">10:00</option>
+        <option value="09:00">11:00</option>
+        <option value="10:00">12:00</option>
+        <option value="11:00">15:00</option>
+        <option value="14:00">16:00</option>
+        <option value="15:00">20:00</option>
+        <option value="16:00">21:00</option>
       </select>
 
       <label for="pagamento">Forma de Pagamento:</label>
@@ -84,14 +82,21 @@
       <label for="plano_saude">Tipo de Plano de Saúde:</label>
       <input type="text" id="plano_saude" name="plano_saude">
 
+      <label for="Médicos" name="Médicos" required>Médicos </label>
+      <select name="Médico" id="Médico" required>
+        <option value="Cardiologista">Doutor Severino</option>
+        <option value="Oftalmologista">Doutor Arnaldo</option>
+        <option value="Endocrinologista">Doutor Marlindo</option>
+      </select>
+
       <button type="submit">Agendar</button>
+
     </form>
     <div id="agendamentos">
-      <h3>Consultas Agendadas</h3>
-      <ul id="lista-agendamentos"></ul>
+<!-- Agendamentos serão exibidos aqui -->
     </div>
 </div>
 
-<script src="/assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
