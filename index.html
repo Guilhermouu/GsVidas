@@ -1,102 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Configurações de metadados e charset -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para folha de estilo CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Título da página -->
     <title>Clínica GVidas</title>
 </head>
 <body>
-<header>
-    <img src="/assets/images/GvidasLogo.png" alt="Logo da Gvidas" class="Logo">
-    <h1 class="titulo">Bem-vindo à Clínica Gvidas</h1>      
-    <!-- Container para o menu hamburguer -->
-     <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav class="menu_hamburger">
-            <ul>
-                <li><a href="https://web.whatsapp.com/">Página Inicial</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </div> 
-</header>
-<div class="container">
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Logo da clínica -->
+        <img src="/assets/images/GvidasLogo.png" alt="Logo da Gvidas" class="Logo">
+        
+        <!-- Título de boas-vindas -->
+        <h1 class="titulo">Bem-vindo à Clínica Gvidas</h1>      
+        
+        <!-- Menu hamburguer para navegação responsiva -->
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegação do menu hamburguer -->
+            <nav class="menu_hamburger">
+                <ul>
+                    <li><a href="#">Página Inicial</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
 
-    <h2>Agendamento de Consultas e Exames</h2>
-    <form id="agendamento-form">
-      <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" required>
+    <!-- Container principal do formulário -->
+    <div class="container">
+        <h2>Agendamento de Consultas e Exames</h2>
+        
+        <!-- Formulário de agendamento -->
+        <form id="agendamento-form">
+            <!-- Campo para nome completo -->
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
 
-      <label for="data_nascimento">Data de Nascimento:</label>
-      <input type="date" id="data_nascimento" name="data_nascimento" required>
+            <!-- Campo para data de nascimento -->
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
 
-      <label for="especialidade">Especialidade Médica:</label>
-      <select id="especialidade" name="especialidade" required>
-        <option value="Cardiologista">Cardiologista</option>
-        <option value="Oftalmologista">Oftalmologista</option>
-        <option value="Endocrinologista">Endocrinologista</option>
-        <option value="Pediatra">Pediatra</option>
-        <option value="Clínico Geral">Clínico Geral</option>
-        <option value="Ortopedista">Ortopedista</option>
-        <option value="Psiquiatra">Psiquiatra</option>
-      </select>
+            <!-- Seleção de especialidade médica -->
+            <label for="especialidade">Especialidade Médica:</label>
+            <select id="especialidade" name="especialidade" required>
+                <option value="Cardiologista">Cardiologista</option>
+                <option value="Oftalmologista">Oftalmologista</option>
+                <option value="Endocrinologista">Endocrinologista</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Clínico Geral">Clínico Geral</option>
+                <option value="Ortopedista">Ortopedista</option>
+                <option value="Psiquiatra">Psiquiatra</option>
+            </select>
 
-      <label for="exame">Exame:</label>
-      <select id="exame" name="exame">
-        <option value="">Nenhum</option>
-        <option value="Ecocardiograma">Ecocardiograma</option>
-        <option value="Eletrocardiograma">Eletrocardiograma</option>
-        <option value="Tomografia">Tomografia</option>
-        <option value="Ultrassom">Ultrassom</option>
-        <option value="Raio-X">Raio-X</option>
-      </select>
+            <!-- Seleção de exame -->
+            <label for="exame">Exame:</label>
+            <select id="exame" name="exame">
+                <option value="">Nenhum</option>
+                <option value="Ecocardiograma">Ecocardiograma</option>
+                <option value="Eletrocardiograma">Eletrocardiograma</option>
+                <option value="Tomografia">Tomografia</option>
+                <option value="Ultrassom">Ultrassom</option>
+                <option value="Raio-X">Raio-X</option>
+            </select>
 
-      <label for="horario">Horário:</label>
-      <select id="horario" name="horario" required>
-        <option value="08:00">10:00</option>
-        <option value="09:00">11:00</option>
-        <option value="10:00">12:00</option>
-        <option value="11:00">15:00</option>
-        <option value="14:00">16:00</option>
-        <option value="15:00">20:00</option>
-        <option value="16:00">21:00</option>
-      </select>
+            <!-- Seleção de horário -->
+            <label for="horario">Horário:</label>
+            <select id="horario" name="horario" required>
+                <option value="08:00">10:00</option>
+                <option value="09:00">11:00</option>
+                <option value="10:00">12:00</option>
+                <option value="11:00">15:00</option>
+                <option value="14:00">16:00</option>
+                <option value="15:00">20:00</option>
+                <option value="16:00">21:00</option>
+            </select>
 
-      <label for="pagamento">Forma de Pagamento:</label>
-      <select id="pagamento" name="pagamento" required>
-        <option value="Dinheiro">Dinheiro Espécie</option>
-        <option value="Pix">Pix</option>
-        <option value="Cartão Crédito">Cartão de Crédito</option>
-        <option value="Cartão Débito">Cartão de Débito</option>
-        <option value="Plano Saúde">Plano de Saúde</option>
-      </select>
+            <!-- Seleção de forma de pagamento -->
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento" name="pagamento" required>
+                <option value="Dinheiro">Dinheiro Espécie</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão Crédito">Cartão de Crédito</option>
+                <option value="Cartão Débito">Cartão de Débito</option>
+                <option value="Plano Saúde">Plano de Saúde</option>
+            </select>
 
-      <label for="plano_saude">Tipo de Plano de Saúde:</label>
-      <input type="text" id="plano_saude" name="plano_saude">
+            <!-- Campo para plano de saúde -->
+            <label for="plano_saude">Tipo de Plano de Saúde:</label>
+            <input type="text" id="plano_saude" name="plano_saude">
 
-      <label for="Médicos" name="Médicos" required>Médicos </label>
-      <select name="Médico" id="Médico" required>
-        <option value="Cardiologista">Doutor Severino</option>
-        <option value="Oftalmologista">Doutor Arnaldo</option>
-        <option value="Endocrinologista">Doutor Marlindo</option>
-      </select>
+            <!-- Seleção de médico -->
+            <label for="Médicos" name="Médicos" required>Médicos </label>
+            <select name="Médico" id="Médico" required>
+                <option value="Cardiologista">Doutor Severino</option>
+                <option value="Oftalmologista">Doutor Arnaldo</option>
+                <option value="Endocrinologista">Doutor Marlindo</option>
+            </select>
 
-      <button type="submit">Agendar</button>
-
-    </form>
-    <div id="agendamentos">
-<!-- Agendamentos serão exibidos aqui -->
+            <!-- Botão de envio do formulário de agendamento -->
+            <button type="submit">Agendar</button>
+        </form>
     </div>
-</div>
 
-<script src="assets/js/script.js"></script>
+    <!-- Link para script JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
